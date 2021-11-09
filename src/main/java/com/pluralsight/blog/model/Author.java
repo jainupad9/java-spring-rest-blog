@@ -16,6 +16,7 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Version private Long version;
     private String firstname;
     private String lastname;
     @JsonIgnore
@@ -24,6 +25,7 @@ public class Author {
     private String password;
     @OneToMany
     List<Post> posts;
+
 
     public Author() {
         super();
