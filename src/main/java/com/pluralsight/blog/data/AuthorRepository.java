@@ -5,17 +5,12 @@ import com.pluralsight.blog.model.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Component;
+import com.pluralsight.blog.model.Author;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
-public class AuthorRepository {
-    public List<Author> findAll() {
-        return new ArrayList<>();
-    }
+@RepositoryRestResource(exported = false)
+public interface AuthorRepository extends JpaRepository<Author, Long>{
 
-    public List<Author> saveAll(List<Author> authors) {
-        return new ArrayList<>();
-    }
 }
