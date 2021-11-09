@@ -34,7 +34,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest()
 //@AutoConfigureMockMvc
 @PrepareForTest(DatabaseLoader.class)
 public class Module1_Tests {
